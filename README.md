@@ -8,7 +8,9 @@
 6. Run command-  docker build -t geolocator . to create image.
 7. Run command -  docker run -it --add-host=host:host-ip -p 9000:9000 geolocator:latest bash and replace host-ip with local laptop ip.
 8.  This will open linux shell. Run commmand to start server -  python3 geolocator.py. This will start server on port 9000.
-9.  Edit C:\Program Files\PostgreSQL\13\data\pg_hba.conf and replace host-ip with local ip address
+9.  Edit C:\Program Files\PostgreSQL\13\data\pg_hba.conf and add below entry.(replace host-ip with local ip address)
+
+
                    host	all	            all	            host-ip/16	        md5
                    host	all	            all	            192.168.171.33/16	        md5
   
