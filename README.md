@@ -5,7 +5,7 @@
 3. Run below command from the location of file cb_2018_us_state_20m.shp. This will import shapefile in postgresql config_usstates table.
 "C:\Program Files\PostgreSQL\13\bin\shp2pgsql.exe" -I -s 2263 cb_2018_us_state_20m.shp public.config_usstates | "C:\Program Files\PostgreSQL\13\bin\psql.exe" -U postgres -d postgres
 5. Install Docker on windows. git pull https://github.com/rishi-mehrotra/GeoLocator.git.
-6. Run commandc-  docker build -t geoocator . to create image.
+6. Run command-  docker build -t geoocator . to create image.
 7. Run command -  docker run -it --add-host=host:<host-ip> -p 9000:9000 geoocator:latest bash and replace <host-ip> with local laptop ip.
 8.  This will open linux shell. Run commmand to start server -  python3 geolocator.py. This will start server on port 9000.
 9.  Edit C:\Program Files\PostgreSQL\13\data\pg_hba.conf and put entry for local ip address
